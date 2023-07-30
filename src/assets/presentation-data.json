@@ -3,27 +3,5 @@
   "images": [
     "assets/images/presentation.jpg"
 
-  ],
-  "partners": [
-    {
-      "src": "../assets/images/logo1.png",
-      "alt": "Logo Partenaire 1"
-    },
-    {
-      "src": "../assets/images/logo2.jpg",
-      "alt": "Logo Partenaire 2"
-    },
-    {
-      "src": "../assets/images/logo3.png",
-      "alt": "Logo Partenaire 3"
-    },
-    {
-      "src": "../assets/images/logo4.png",
-      "alt": "Logo Partenaire 4"
-    },
-    {
-      "src": "../assets/images/logo5.jpg",
-      "alt": "Logo Partenaire 5"
-    }
   ]
 }

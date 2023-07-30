@@ -1,9 +1,13 @@
+<!-- Barre de navigation en haut de la page -->
 <div class="topnav fixed-topnav" id="myTopnav">
+  <!-- Logo de l'entreprise, qui mène à la page d'accueil lorsqu'on clique dessus -->
   <div class="logo">
     <a class="navbar-brand" routerLink="/">{{title}} <span class="brand-square"></span>
     </a>
   </div>
 
+  <!-- Différents liens de la barre de navigation -->
+  <!-- Chaque lien appelle une fonction qui fait défiler la page jusqu'à la section correspondante -->
   <a (click)="scrollToPresentation()"> <span >Qui sommes nous</span> </a>
   <a (click)="scrollToValeurs()"><span >Nos Valeurs</span></a>
   <a (click)="scrollToService()"><span >Nos services</span></a>
@@ -12,6 +16,8 @@
   <a (click)="scrollToTeam()"><span >Notre équipe</span></a>
   <a (click)="scrollToContact()"><span >Contact</span></a>
 
+  <!-- Bouton pour déplier le menu sur les petits écrans -->
+  <!-- Le click sur ce bouton appelle la fonction "myMenu()" -->
   <a href="javascript:void(0);" class="icon" (click)="myMenu()">
     <i class="fa fa-bars"></i>
   </a>

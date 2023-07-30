@@ -1,4 +1,4 @@
-// Importe les éléments nécessaires pour créer un service Angular
+
 import { Injectable } from '@angular/core';
 import presentationData from '../../../assets/presentation-data.json';
 
@@ -14,8 +14,5 @@ export class PresentationService {
     return presentationData;
   }
 
-  // Méthode pour récupérer les logos des partenaires à partir du fichier JSON
-  getPartnerLogos() {
-    return presentationData.partners;
-  }
+
 }

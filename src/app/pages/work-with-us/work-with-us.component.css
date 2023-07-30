@@ -1,3 +1,4 @@
+/* Conteneur principal pour la section "Travailler avec nous" */
 .work-with-us-container {
   display: flex;
   flex-wrap: wrap;
@@ -6,6 +7,7 @@
   padding: 2rem;
 }
 
+/* Conteneur pour l'image de la section "Travailler avec nous" */
 .image-container {
   width: 100%;
   margin-bottom: 2rem;
@@ -13,11 +15,13 @@
   position: relative;
 }
 
+/* Règles d'affichage pour l'image dans le conteneur */
 .image-container img {
   width: 100%;
   height: auto;
 }
 
+/* Mise en page du contenu de la section "Travailler avec nous" */
 .content {
   width: 100%;
   display: flex;
@@ -27,15 +31,18 @@
   text-align: center;
 }
 
+/* Règles de style pour le titre global */
 .global-title {
   font-size: 3rem;
   margin-bottom: 3rem;
 }
 
+/* Mise en évidence des mots importants dans le titre */
 .colored-word {
   color: #7EAED9;
 }
 
+/* Conteneur pour les avantages de travailler avec nous */
 .advantages {
   display: flex;
   flex-wrap: wrap;
@@ -44,6 +51,7 @@
   margin-bottom: 2rem;
 }
 
+/* Mise en page individuelle pour chaque avantage */
 .advantage {
   display: flex;
   align-items: center;
@@ -53,18 +61,21 @@
   margin-right: 1rem;
 }
 
+/* Styles pour l'icône de chaque avantage */
 .advantage span {
   font-size: 2.5rem;
   color: #7EAED9;
   margin-right: 1rem;
 }
 
+/* Styles pour le texte d'incitation à postuler */
 .apply-text {
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
 }
 
+/* Styles pour le bouton "Postuler maintenant" */
 .apply-btn {
   font-size: 1.5rem;
   padding: 0.5rem 2rem;
@@ -76,10 +87,12 @@
   transition: background-color 0.3s;
 }
 
+/* Effet hover pour le bouton "Postuler maintenant" */
 .apply-btn:hover {
   background-color: #5c8db0;
 }
 
+/* Media queries pour les écrans à partir de 768px de large */
 @media screen and (min-width: 768px) {
   .work-with-us-container {
     padding: 4rem;
@@ -101,11 +114,13 @@
   }
 }
 
+/* Mise en page du conteneur des avantages */
 .advantage-wrapper {
   display: flex;
   justify-content: center;
 }
 
+/* Alignement du texte pour la section d'application */
 .apply-section {
   text-align: center;
 }

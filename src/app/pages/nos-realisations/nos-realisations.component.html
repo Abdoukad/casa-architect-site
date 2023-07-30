@@ -1,28 +1,59 @@
-<section class="realisations container-engagement" id="engagement-id" >
+<!-- Section principale qui contient les réalisations -->
+<section class="realisations container-engagement" id="engagement-id">
+
+  <!-- Container principal pour la mise en page -->
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+
+        <!-- *ngIf est une directive Angular qui ne rend le contenu que si la condition est vraie.
+             Ici, le contenu ne sera affiché que si l'objet 'realisations' existe -->
         <div *ngIf="realisations">
+
+          <!-- Titre de la section -->
           <h1 class="trait-title" class="title-presentation">Nos <span class="colored-word">Réalisations</span></h1>
+
+          <!-- Description de la section, en utilisant la liaison de propriété Angular [innerHTML] pour insérer du HTML en toute sécurité -->
           <p class="lead-texte" [innerHTML]="realisations.description"></p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Galerie contenant les projets -->
   <div class="galerie">
+
+    <!-- *ngFor est une directive Angular pour le rendu de listes.
+         Ici, il crée un div pour chaque 'projet' dans 'realisations.projets' -->
     <div *ngFor="let projet of realisations?.projets" class="projet">
+
+      <!-- Image du projet. Lorsqu'on clique sur l'image, la méthode 'openModal' est appelée avec l'image et le projet comme arguments -->
       <img [alt]="projet.nom" [src]="projet.image" class="img-fluid" (click)="openModal(projet.image, projet)" />
+
+      <!-- Nom du projet. Lorsqu'on clique sur le nom, la même méthode 'openModal' est appelée -->
       <div class="project-name" (click)="openModal(projet.image, projet)">
         {{ projet.nom }}
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal pour afficher les détails du projet. Lorsqu'on clique en dehors de la modal, la méthode 'closeModal' est appelée -->
 <div id="modal" class="modal" (click)="closeModal()">
+
+  <!-- Contenu de la modal. La méthode 'stopPropagation' est appelée pour éviter la fermeture de la modal lorsque l'on clique à l'intérieur -->
   <div class="modal-content" (click)="$event.stopPropagation()">
+
+    <!-- Bouton pour fermer la modal -->
     <span class="modal-close" (click)="closeModal()">&times;</span>
+
+    <!-- Image du projet sélectionné. Elle ne sera affichée que si 'selectedImage' existe -->
     <img *ngIf="selectedImage" [src]="selectedImage" class="modal-image" />
+
+    <!-- Nom du projet sélectionné. Il ne sera affiché que si 'selectedProject' existe -->
     <h3 class="modal-title" *ngIf="selectedProject">{{ selectedProject.nom }}</h3>
+
+    <!-- Description du projet sélectionné. Elle ne sera affichée que si 'selectedProject' existe -->
     <p class="modal-description" *ngIf="selectedProject">{{ selectedProject.description }}</p>
   </div>
 </div>

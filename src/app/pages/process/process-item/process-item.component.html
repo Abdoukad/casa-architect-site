@@ -1,23 +1,30 @@
-<!-- Ce bloc représente la barre de navigation des étapes du processus. -->
+<!-- Bloc contenant la barre de navigation des étapes du processus. -->
 <div class="step-nav">
-  <!-- Cette boucle *ngFor permet de générer les différentes étapes du processus en fonction du tableau "steps" qui est défini dans le component. -->
+  <!-- Boucle *ngFor pour générer les différentes étapes du processus en fonction du tableau "steps" défini dans le composant. -->
   <div (click)="setActiveStep(i)" *ngFor="let step of steps; let i = index"
        [ngClass]="{'active': i === activeStepIndex}" class="step-nav-item">
+    <!-- Titre de chaque étape -->
     <div class="step-title">{{ step.title }}</div>
   </div>
 </div>
-<!-- Ce bloc affiche les détails de l'étape active. -->
+
+<!-- Bloc pour afficher les détails de l'étape actuellement sélectionnée (active). -->
 <div class="step-content">
-  <!-- Cette div contient la description de l'étape. -->
+  <!-- Sous-bloc contenant la description de l'étape active. -->
   <div class="step-description">
+    <!-- Titre de l'étape avec un compteur pour l'index de l'étape -->
     <h3>
       <div class="step-counter">{{ activeStepIndex + 1 }}</div>
+      <!-- Titre de l'étape active -->
       {{ steps[activeStepIndex].title }}
     </h3>
+    <!-- Description de l'étape active -->
     <p class="lead-texte">{{ steps[activeStepIndex].description }}</p>
   </div>
-  <!-- Cette div contient l'image correspondante à l'étape. -->
+
+  <!-- Sous-bloc contenant l'image associée à l'étape active. -->
   <div class="step-image">
+    <!-- Image de l'étape active. Le chemin de l'image est récupéré à partir du tableau "steps". -->
     <img [src]="steps[activeStepIndex].image" alt="{{ steps[activeStepIndex].title }}"/>
   </div>
 </div>

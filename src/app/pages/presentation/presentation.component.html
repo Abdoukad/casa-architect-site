@@ -1,21 +1,30 @@
-<!-- Conteneur principal -->
 <div class="container container-presentation" id="presentation-id">
   <div class="container-fluid px-5 py-5">
     <div class="row align-items-center">
-      <!-- Colonne pour le texte de présentation -->
+
+      <!-- Début de la colonne du texte de présentation -->
       <div class="col-lg-8 presentation-text">
+
         <!-- Titre de la section -->
         <h1 class="mb-4 title-presentation">Qui sommes <span class="colored-word">nous</span></h1>
-        <!-- Paragraphe de présentation, le contenu provient du fichier JSON -->
+
+        <!-- Premier paragraphe de la présentation -->
+        <!-- Le contenu du texte est extrait de la propriété 'text' du fichier JSON 'presentationData' -->
+        <!-- On utilise 'split' pour diviser le texte à chaque point et on prend la première partie (avant le premier point) -->
         <p class="lead justified-text">{{ presentationData.text.split('.')[0] }}.</p>
+
+        <!-- Second paragraphe de la présentation -->
+        <!-- On utilise à nouveau 'split' pour diviser le texte, mais cette fois on prend toutes les parties après le premier point et on les réassemble avec 'join' -->
         <p class="lead justified-text">{{ presentationData.text.split('.').slice(1).join('.') }}</p>
       </div>
 
-      <!-- Colonne pour l'image de présentation -->
+      <!-- Début de la colonne pour l'image de présentation -->
       <div class="col-lg-4 d-flex justify-content-center image-container">
-        <!-- Image, le chemin de l'image provient du fichier JSON -->
+
+        <!-- Image de présentation -->
         <img [src]="presentationData.images[0]" alt="Image de présentation" class="img-fluid rounded">
       </div>
+
     </div>
   </div>
 </div>

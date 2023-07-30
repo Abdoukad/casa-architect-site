@@ -1,14 +1,21 @@
+// Importation des classes nécessaires des bibliothèques Angular
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+
+// Importation du service personnalisé pour le défilement du menu
 import { MenuScrollService } from 'src/app/services/menu-scroll.service';
 
+// Décorateur de composant avec métadonnées
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
+// Exportation de la classe NavbarComponent et implémentation de l'interface OnInit
 export class NavbarComponent implements OnInit  {
 
+  // Déclaration des variables qui contiendront les valeurs de référence des différentes sections
   presentationValue: any;
   valuesValue: any;
   serviceValue: any;
@@ -19,9 +26,11 @@ export class NavbarComponent implements OnInit  {
   teamValue: any;
   topicValue: any;
 
+  // Constructeur qui injecte deux services, ViewportScroller et MenuScrollService
   constructor(private _viewportScroller: ViewportScroller,
-    private _menuScrollService : MenuScrollService) { }
+              private _menuScrollService : MenuScrollService) { }
 
+  // Hook de cycle de vie ngOnInit pour obtenir les valeurs de référence des différentes sections lors de l'initialisation du composant
   ngOnInit(): void {
     this._menuScrollService.getConactDialog().subscribe((el: string) => this.contactValue = el);
     this._menuScrollService.getPresentationDialog().subscribe((el: string) => this.presentationValue = el);
@@ -32,10 +41,9 @@ export class NavbarComponent implements OnInit  {
     this._menuScrollService.getTeamDialog().subscribe((el: string) => this.teamValue = el);
     this._menuScrollService.getValueDialog().subscribe((el: string) => this.valuesValue = el);
     this._menuScrollService.getTopicDialog().subscribe((el: string) => this.topicValue = el);
-    
   }
 
-  // Titre de l'entreprise affiché sur la navbar
+  // Titre de l'entreprise affiché sur la barre de navigation
   title = 'CASA-ARCHI';
 
   // Booléen indiquant si le menu est visible ou non
@@ -48,11 +56,11 @@ export class NavbarComponent implements OnInit  {
   toggleNav() {
     // Si aucune animation n'est en cours
     if (!this.animationInProgress) {
-      // On marque l'animation comme étant en cours
+      // Marquer l'animation comme en cours
       this.animationInProgress = true;
-      // On inverse la valeur de showNav pour afficher ou cacher le menu
+      // Inverser la valeur de showNav pour afficher ou cacher le menu
       this.showNav = !this.showNav;
-      // On attend la fin de l'animation avant de marquer celle-ci comme étant terminée
+      // Attendre la fin de l'animation avant de la marquer comme terminée
       setTimeout(() => {
         this.animationInProgress = false;
       }, 500); // La durée de l'animation en ms
@@ -63,17 +71,18 @@ export class NavbarComponent implements OnInit  {
   closeNav() {
     // Si aucune animation n'est en cours
     if (!this.animationInProgress) {
-      // On marque l'animation comme étant en cours
+      // Marquer l'animation comme en cours
       this.animationInProgress = true;
-      // On cache le menu
+      // Cacher le menu
       this.showNav = false;
-      // On attend la fin de l'animation avant de marquer celle-ci comme étant terminée
+      // Attendre la fin de l'animation avant de la marquer comme terminée
       setTimeout(() => {
         this.animationInProgress = false;
       }, 500); // La durée de l'animation en ms
     }
   }
 
+  // Méthodes pour défiler jusqu'aux sections respectives sur la page Web
   scrollToPresentation() {
     if (this.presentationValue) { this._viewportScroller.scrollToAnchor(this.presentationValue); }
   }
@@ -102,6 +111,7 @@ export class NavbarComponent implements OnInit  {
     if (this.contactValue) { this._viewportScroller.scrollToAnchor(this.contactValue); }
   }
 
+  // Méthode pour contrôler le comportement responsive de la barre de navigation
   myMenu(): void {
     const x = document.getElementById("myTopnav") as HTMLElement;
     if (x.className === "topnav") {
@@ -110,5 +120,5 @@ export class NavbarComponent implements OnInit  {
       x.className = "topnav";
     }
   }
-  
+
 }

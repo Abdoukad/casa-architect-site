@@ -1,46 +1,54 @@
+
 body {
   font-family: 'Lato', sans-serif;
   color: #333;
-  background-image: url('/assets/images/abstract-background.png');  /* Ajoute une image de fond subtile */
+  background-image: url('/assets/images/abstract-background.png');
   background-repeat: no-repeat;
   background-position: right top;
-  background-size: 35%;
+  background-size: 35%; /* Réduit la taille de l'image de fond à 35% de sa taille d'origine */
 }
 
+/* Style spécifique pour la section 'about-us' */
 #about-us {
   font-size: 1.2rem;
 }
 
+/* Style pour le texte principal dans la section 'about-us' */
 #about-us .text-primary {
   color: #7EAED9;
 }
 
+/* Style pour le titre h1 dans la section 'about-us' */
 #about-us h1 {
-  font-family: 'Playfair Display', serif;  /* Une police plus sophistiquée pour le titre */
+  font-family: 'Playfair Display', serif;
   font-size: 3rem;
   letter-spacing: 1px;
 }
 
+/* Style pour le texte descriptif ('lead') */
 .lead {
   font-family: 'Lato', sans-serif;
   color: black;
   font-size: 1.4rem;
-  margin-right: 80px;  /* Ajout d'un espace supplémentaire entre le texte et l'image */
+  margin-right: 80px; /* Ajoute un espace à droite pour séparer le texte de l'image */
 }
+
 
 .justified-text {
   text-align: justify;
 }
 
+/* Style pour l'image responsive dans la section 'about-us' */
 #about-us .img-fluid {
   height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out;
+  object-fit: cover; /* Ajuste l'image pour qu'elle couvre entièrement son conteneur sans déformer l'image */
+  transition: transform 0.3s ease-in-out; /* Transition douce lors du redimensionnement de l'image */
   border-radius: 15px;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-  margin-left: 80px;  /* Ajout d'un espace supplémentaire entre le texte et l'image */
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 80px;
 }
 
+/* Style pour l'effet hover sur l'image responsive dans la section 'about-us' */
 #about-us .img-fluid:hover {
-  transform: scale(1.03);
+  transform: scale(1.03); /* Agrandit légèrement l'image lorsqu'elle est survolée */
 }
