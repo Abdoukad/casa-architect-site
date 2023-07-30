@@ -1,0 +1,17 @@
+<!--
+Les événements "mouseenter" et "mouseleave" sont utilisés pour déclencher les fonctions onMouseEnter() et onMouseLeave().
+La classe "hovered" est ajoutée de manière conditionnelle lorsqu'un élément est survolé (isHovered = true).
+-->
+<div (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [ngClass]="{ 'hovered': isHovered }"
+     class="value-item shadow-sm rounded"
+     data-aos="fade-up">
+  <!-- Conteneur pour l'icône -->
+  <div class="icon-container">
+    <!-- L'icône est déterminée par la propriété "icon" de l'objet "value" -->
+    <i [class]="value.icon"></i>
+  </div>
+  <!-- Titre de l'élément de valeur, déterminé par la propriété "title" de l'objet "value" -->
+  <h3>{{ value.title }}</h3>
+  <!-- Description de l'élément de valeur, déterminée par la propriété "description" de l'objet "value" -->
+  <p class="lead-texte">{{ value.description }}</p>
+</div>

@@ -1,0 +1,23 @@
+<!-- Ce bloc représente la barre de navigation des étapes du processus. -->
+<div class="step-nav">
+  <!-- Cette boucle *ngFor permet de générer les différentes étapes du processus en fonction du tableau "steps" qui est défini dans le component. -->
+  <div (click)="setActiveStep(i)" *ngFor="let step of steps; let i = index"
+       [ngClass]="{'active': i === activeStepIndex}" class="step-nav-item">
+    <div class="step-title">{{ step.title }}</div>
+  </div>
+</div>
+<!-- Ce bloc affiche les détails de l'étape active. -->
+<div class="step-content">
+  <!-- Cette div contient la description de l'étape. -->
+  <div class="step-description">
+    <h3>
+      <div class="step-counter">{{ activeStepIndex + 1 }}</div>
+      {{ steps[activeStepIndex].title }}
+    </h3>
+    <p class="lead-texte">{{ steps[activeStepIndex].description }}</p>
+  </div>
+  <!-- Cette div contient l'image correspondante à l'étape. -->
+  <div class="step-image">
+    <img [src]="steps[activeStepIndex].image" alt="{{ steps[activeStepIndex].title }}"/>
+  </div>
+</div>

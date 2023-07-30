@@ -1,0 +1,124 @@
+.value-item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 60px; /* Ajoute de la marge en bas */
+  /* Transition pour les transformations et changements de couleur d'arrière-plan */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  /* Calcule la largeur de chaque élément en fonction du nombre total d'éléments */
+  flex-basis: calc((100% - 100px * (length - 1)) / length);
+  max-width: 300px; /* Limite la largeur maximale de chaque élément */
+}
+
+.values .values-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne suivante */
+  gap: 100px; /* Espacement entre les items de valeurs */
+  overflow-x: auto; /* Ajoute un scroll horizontal pour les petits écrans */
+}
+.values .container {
+  /* Ajoutez les lignes suivantes */
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 0 20px; /* Ajoutez un peu de padding pour éviter que le contenu touche les bords */
+}
+
+/* Style appliqué lorsqu'un élément de valeur est survolé */
+.value-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(126, 174, 217, 0.2); /* Fond plus transparent lors du survol */
+}
+
+/* Style pour le conteneur d'icônes */
+.icon-container {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #7EAED9;
+}
+
+/* Style pour le titre de l'élément de valeur */
+.value-item h3 {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 1.8rem; /* Ajoutez cette ligne pour augmenter la taille du texte */
+}
+
+/* Style pour la ligne de soulignement du titre */
+.value-item h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 2px;
+  background-color: #7EAED9; /* Couleur de soulignement pour le titre */
+  margin: 0 auto;
+  width: 100%;
+  opacity: 1; /* Soulignement permanent */
+}
+
+/* Style pour la description de l'élément de valeur */
+.value-item p {
+  text-align: center;
+  min-height: 200px;
+}
+
+.values .values-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* Empêche les éléments de passer à la ligne suivante */
+  gap: 100px; /* Espacement entre les items de valeurs */
+}
+/* Styles responsives pour différentes largeurs d'écran */
+@media (max-width: 1199px) {
+  .icon-container {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 991px) {
+  .value-item {
+    flex-basis: calc(50% - 40px); /* Largeur de chaque élément */
+  }
+}
+
+@media (max-width: 767px) {
+  .values .values-list {
+    flex-wrap: wrap; /* Permettre aux éléments de passer à la ligne suivante */
+  }
+
+  .value-item {
+    flex-basis: calc(50% - 20px); /* Largeur de chaque élément */
+    margin-bottom: 30px; /* Espacement entre les éléments sur les petits écrans */
+  }
+}
+
+/* Styles pour les très petits écrans */
+@media (max-width: 575px) {
+  .value-item {
+    padding: 10px;
+    margin-bottom: 20px; /* Espacement entre les éléments sur les très petits écrans */
+  }
+
+  .icon-container {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .value-item h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .value-item p {
+    font-size: 14px;
+  }
+
+  .values .values-list {
+    gap: 20px; /* Réduire l'espacement entre les items de valeurs */
+  }
+}

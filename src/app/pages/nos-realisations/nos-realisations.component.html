@@ -1,0 +1,28 @@
+<section class="realisations container-engagement" id="engagement-id" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div *ngIf="realisations">
+          <h1 class="trait-title" class="title-presentation">Nos <span class="colored-word">Réalisations</span></h1>
+          <p class="lead-texte" [innerHTML]="realisations.description"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="galerie">
+    <div *ngFor="let projet of realisations?.projets" class="projet">
+      <img [alt]="projet.nom" [src]="projet.image" class="img-fluid" (click)="openModal(projet.image, projet)" />
+      <div class="project-name" (click)="openModal(projet.image, projet)">
+        {{ projet.nom }}
+      </div>
+    </div>
+  </div>
+</section>
+<div id="modal" class="modal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="modal-close" (click)="closeModal()">&times;</span>
+    <img *ngIf="selectedImage" [src]="selectedImage" class="modal-image" />
+    <h3 class="modal-title" *ngIf="selectedProject">{{ selectedProject.nom }}</h3>
+    <p class="modal-description" *ngIf="selectedProject">{{ selectedProject.description }}</p>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<section class="values container-values" id="values-id" style="background-color: #f8f8f8;">
+<!-- Conteneur pour centrer et organiser le contenu -->
+  <div class="container">
+    <!-- Titre de la section avec la classe 'bold' conditionnelle -->
+    <h1 class="global-title" class="title-presentation">Nos <span class="colored-word">valeurs</span></h1>
+    <!-- Liste des items de valeurs -->
+    <div class="values-list">
+      <!-- Utilisation de la directive *ngFor pour générer les éléments 'app-value-item' pour chaque valeur dans 'values' -->
+      <!-- Liaison de la propriété 'value' de 'app-value-item' à l'élément 'value' de la liste -->
+      <!-- Liaison de l'événement 'hovered' de 'app-value-item' à la méthode 'onTitleHover' du composant parent -->
+      <app-value-item (hovered)="onTitleHover($event)" *ngFor="let value of values" [value]="value"></app-value-item>
+    </div>
+  </div>
+</section>

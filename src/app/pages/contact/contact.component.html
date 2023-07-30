@@ -1,0 +1,74 @@
+<!-- Conteneur principal du composant contact -->
+<div class="contact-container" id="contact-id">
+  <!-- En-tête du composant contact -->
+  <div class="contact-header global-header title-presentation">
+    <h1 class="mb-3 mb-md-4">Nous <span class="colored-word">contacter</span></h1>
+    <p class="mb-0 mb-md-3">Remplissez le formulaire ci-dessous ou utilisez les informations de contact pour nous joindre.</p>
+  </div>
+  
+
+  <!-- Corps du composant contact -->
+  <div class="contact-body global-body">
+        <div class="contact-info-wrapper">
+          <!-- Bloc d'informations de contact -->
+          <div class="contact-info">
+            <ul>
+              <li><i class="bi bi-geo-alt-fill"></i>123 rue du Cabinet d'Architecture<br>75001 Paris, France</li>
+              <li><i class="bi bi-telephone-fill"></i>+33 1 23 45 67 89</li>
+              <li><i class="bi bi-envelope-fill"></i>contact@casaarchitecte.fr</li>
+            </ul>
+          </div>
+        </div>
+        <form class="contact-form" (submit)="onSubmit($event)">
+          <!-- Champ du nom complet -->
+          <div class="form-group">
+            <label for="inputName">Nom complet</label>
+            <input type="text" class="form-control" id="inputName" name="fullName" required>
+          </div>
+
+          <!-- Champ de l'adresse email -->
+          <div class="form-group">
+            <label for="inputEmail">Adresse email</label>
+            <input type="email" class="form-control" id="inputEmail" name="email" required>
+          </div>
+
+          <!-- Champ du numéro de téléphone -->
+          <div class="form-group">
+            <label for="inputTel">Téléphone</label>
+            <input type="tel" class="form-control" id="inputTel" name="phone" required>
+          </div>
+
+          <!-- Champ de sélection du sujet -->
+          <div class="form-group">
+            <label for="selectSubject">Sujet</label>
+            <select class="form-control" id="selectSubject" name="subject" required>
+              <option value="" selected disabled hidden>Sélectionnez un sujet</option>
+              <option value="devis">Devis</option>
+              <option value="partenariat">Partenariat</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+
+          <!-- Champ du message -->
+          <div class="form-group">
+            <label for="inputMessage">Message</label>
+            <textarea class="form-control" id="inputMessage" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- Bouton d'envoi du formulaire -->
+          <button type="submit" class="btn global-btn">Envoyer</button>
+
+          <!-- Indicateur de chargement -->
+          <div *ngIf="isLoading" class="loading-indicator">
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            <span class="loading-text">Envoi en cours...</span>
+          </div>
+
+
+          <!-- Messages de succès et d'erreur -->
+          <div *ngIf="successMessage" class="alert alert-success">{{ successMessage }}</div>
+          <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+
+        </form>
+  </div>
+</div>

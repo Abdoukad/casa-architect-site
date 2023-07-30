@@ -1,0 +1,111 @@
+/* Styles du conteneur principal du pied de page */
+.footer {
+  background-image: url('/assets/images/footer-min.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 2rem 0;
+}
+
+/* Styles pour le carré de couleur à côté du nom de la marque */
+.brand-square {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #7EAED9;
+  margin-left: 5px;
+  vertical-align: middle; /* Alignement vertical du carré par rapport au texte environnant */
+}
+
+/* Styles pour le contenu du pied de page (logo, liens et icônes de médias sociaux) */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styles pour le logo du pied de page */
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Styles pour les liens de navigation du pied de page */
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles pour les liens individuels du pied de page */
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+/* Styles pour les liens du pied de page lorsqu'ils sont survolés */
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour les icônes de médias sociaux du pied de page */
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles pour les liens des icônes de médias sociaux */
+.footer-social a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Styles pour les liens des icônes de médias sociaux lorsqu'ils sont survolés */
+.footer-social a:hover {
+  color: #7EAED9;
+}
+
+/* Styles pour le texte du bas du pied de page */
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Styles pour le lien du concepteur du site */
+.footer-bottom a {
+  color: #7EAED9;
+  text-decoration: none;
+}
+
+/* Styles pour le lien du concepteur du site lorsqu'il est survolé */
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour les écrans de petite taille (mobiles et tablettes) */
+@media screen and (max-width: 768px) {
+  /* Styles pour le contenu du pied de page en mode responsive */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Styles pour les liens de navigation du pied de page en mode responsive */
+  .footer-links {
+    margin-top: 1rem;
+  }
+
+  /* Styles pour les icônes de médias sociaux du pied de page en mode responsive */
+  .footer-social {
+    margin-top: 1rem;
+  }
+}

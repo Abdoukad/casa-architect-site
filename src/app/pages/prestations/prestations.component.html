@@ -1,0 +1,32 @@
+<!-- Début de la section -->
+<section class="prestations container-prestations" id="prestations-id">
+  <!-- Le conteneur englobe tout le contenu de la section -->
+  <div class="container" data-aos="fade-left">
+    <!-- Le titre de la section -->
+    <h1 class="prestations-title title-presentation">Nos <span class="colored-word">services</span></h1>
+    <!-- La galerie de prestations contient toutes les cartes de prestation -->
+    <div class="prestations-gallery">
+      <!-- Une carte de prestation est créée pour chaque prestation (service) dans le tableau de prestations -->
+      <div class="prestation-item" *ngFor="let service of prestationsService.getPrestations() | async; let i=index">
+        <!-- Le conteneur de l'image contient l'image de la prestation -->
+        <div class="prestation-img-container">
+          <!-- L'image de la prestation est chargée à partir de l'URL spécifiée par service.image -->
+          <img [src]="service.image" [alt]="service.title | uppercase" />
+        </div>
+        <!-- Le contenu de la prestation contient le titre et le slogan de la prestation -->
+        <div class="prestation-content d-flex flex-column">
+          <!-- Le conteneur du titre contient le titre de la prestation -->
+          <div class="prestation-title-container">
+            <!-- Le titre de la prestation est chargé à partir de service.title -->
+            <h3>{{ service.title | uppercase }}</h3>
+          </div>
+          <!-- Le conteneur du slogan contient le slogan de la prestation -->
+          <div class="prestation-slogan-container mt-auto">
+            <!-- Le slogan de la prestation est chargé à partir de service.slogan -->
+            <p>{{ service.slogan }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

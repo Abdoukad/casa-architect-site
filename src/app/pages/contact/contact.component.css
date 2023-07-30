@@ -1,0 +1,183 @@
+/* Styles pour le conteneur principal du composant contact */
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/images/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Styles pour l'en-tête du composant contact */
+.contact-header {
+  text-align: center;
+}
+
+/* Styles pour le titre de l'en-tête du composant contact */
+.contact-header h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+/* Styles pour le texte de l'en-tête du composant contact */
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Styles pour le corps du composant contact */
+.contact-body {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Styles pour le bloc d'informations de contact */
+.contact-info {
+  margin-right: 4rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Styles pour la liste des informations de contact */
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Styles pour les éléments de la liste des informations de contact */
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Styles pour les icônes des informations de contact */
+.contact-info i {
+  margin-right: 1rem;
+  color: #7EAED9;
+}
+
+/* Styles pour le formulaire de contact */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 3rem;
+}
+
+/* Styles pour les groupes de champs du formulaire */
+.form-group {
+  /* margin-bottom: 2rem; */
+}
+
+/* Styles pour les labels des champs du formulaire */
+.form-group label {
+  font-size: 1.2rem;
+  color: #333;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Styles pour les champs de saisie du formulaire */
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+/* Styles pour les champs de saisie du formulaire lorsqu'ils sont en focus */
+.form-control:focus {
+  border-color: #7EAED9;
+  outline: none;
+}
+
+/* Styles pour le champ de saisie de type textarea */
+textarea.form-control {
+  height: 8rem;
+}
+
+/* Styles pour le bouton d'envoi du formulaire */
+.btn {
+  background-color: #7EAED9;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Styles pour le bouton d'envoi du formulaire lorsqu'il est survolé */
+.btn:hover {
+  background-color: #5c8db0;
+}
+
+/* Positionnement et style des messages d'alerte */
+.alert {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.alert-danger {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+.submit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.spinner-border {
+  position: absolute;
+  right: 10px;
+}
+.contact-info-wrapper {
+  width: 700px;
+  margin-top: 130px;
+}
+
+/* Media query pour les écrans dont la largeur est inférieure ou égale à 768px */
+@media screen and (max-width: 768px) {
+  /* Styles pour le corps du composant contact sur les écrans de petite taille */
+  .contact-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Styles pour le bloc d'informations de contact sur les écrans de petite taille */
+  .contact-info {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  /* Styles pour le formulaire de contact sur les écrans de petite taille */
+  .contact-form {
+    width: 80%;
+  }
+
+  .contact-info-wrapper {
+    width: 100%;
+  }
+}

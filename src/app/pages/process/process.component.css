@@ -1,0 +1,130 @@
+/* Le conteneur général a une marge en haut et en bas de 3 rem */
+.container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+/* La disposition des éléments de démarche est centrée et a une marge en haut de 4 rem */
+.process-items {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+/* Pour les appareils mobiles avec une largeur maximale de 768 pixels, les éléments de démarche sont disposés en colonne avec un espacement de 3 rem */
+@media (max-width: 768px) {
+  .process-items {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+}
+
+/* Les titres de démarche ont une taille de police de 2,5 rem, une marge en haut et en bas de 2 rem et sont centrés */
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+/* Ajoute une ligne horizontale avant le titre de démarche avec une hauteur de 3 px, une largeur de 150 px, une couleur de fond bleue et une position absolue en haut */
+h2::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 150px;
+  margin: 0 auto;
+  background-color: #7EAED9;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Styles pour les grands écrans */
+@media (min-width: 1200px) {
+  /* Réduire les marges du conteneur principal */
+  .container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  /* Centrer les éléments de démarche sur l'axe horizontal */
+  .process-items {
+    justify-content: space-around;
+  }
+
+  /* Augmenter la taille de la police pour les titres de démarche */
+  h2 {
+    font-size: 3rem;
+  }
+
+  /* Réduire la taille de la ligne horizontale avant les titres de démarche */
+  h2::before {
+    width: 75px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* Les titres de démarche ont une taille de police de 2rem */
+  h2 {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Ajoute une ligne horizontale avant le titre de démarche avec une hauteur de 2 px, une largeur de 100 px et une position absolue en haut */
+  h2::before {
+    height: 2px;
+    width: 100px;
+  }
+
+  /* Les éléments de démarche ont une marge de 2rem à gauche et à droite */
+  .process-items {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 3rem;
+
+  }
+
+  /* La largeur des éléments de démarche est de 100% */
+  .process-item {
+    width: 100%;
+  }
+
+  /* Le titre de chaque élément de démarche a une taille de police de 2rem et une marge en haut de 1rem */
+  .process-item h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  /* Les icônes des éléments de démarche ont une taille de 3rem et une marge en haut de 1rem */
+  .process-item img {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1rem;
+  }
+
+  /* Les étapes des éléments de démarche ont une taille de police de 1.2rem */
+  .process-item ol li {
+    font-size: 1.2rem;
+  }
+
+  /* Ajoute une marge en haut de 2rem à la section "Nos démarches" */
+  .process {
+    margin-top: 2rem;
+  }
+}

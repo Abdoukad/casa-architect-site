@@ -1,0 +1,29 @@
+{
+  "text": "Notre cabinet d'architectes est composé d'une équipe de professionnels passionnés et expérimentés. Depuis notre création, nous avons réalisé de nombreux projets résidentiels et commerciaux, en accordant une importance particulière à l'esthétique et à la fonctionnalité. Notre objectif est de créer des espaces de vie harmonieux et durables pour nos clients.",
+  "images": [
+    "assets/images/presentation.jpg"
+
+  ],
+  "partners": [
+    {
+      "src": "../assets/images/logo1.png",
+      "alt": "Logo Partenaire 1"
+    },
+    {
+      "src": "../assets/images/logo2.jpg",
+      "alt": "Logo Partenaire 2"
+    },
+    {
+      "src": "../assets/images/logo3.png",
+      "alt": "Logo Partenaire 3"
+    },
+    {
+      "src": "../assets/images/logo4.png",
+      "alt": "Logo Partenaire 4"
+    },
+    {
+      "src": "../assets/images/logo5.jpg",
+      "alt": "Logo Partenaire 5"
+    }
+  ]
+}

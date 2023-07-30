@@ -1,0 +1,207 @@
+/* Import de la bibliothèque AOS */
+@import '~aos/dist/aos.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
+/* Définition des styles globaux pour le corps de la page */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f8f8f8;
+  overflow-x: hidden;
+  margin-right: 0;
+}
+
+/* Styles pour les titres */
+.global-title, h1 {
+  font-family: 'Abril Fatface', sans-serif;
+  color: #333;
+  text-align: center;
+  position: relative; /* Ajout de la position relative pour permettre l'ajout de la ligne bleue */
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Style pour le mot coloré */
+.colored-word {
+  color: #7EAED9;
+}
+
+/* Style pour la ligne bleue */
+.global-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 3px;
+  background-color: #7EAED9;
+  margin: 0 auto;
+  width: 150px;
+}
+
+/* Styles pour les sous-titres */
+h2 {
+  font-size: 2rem;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Abril Fatface', sans-serif;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Styles pour les autres textes */
+p, a {
+  font-family: 'Lato', sans-serif;
+  color: dimgrey;
+  font-size: 1.4rem;
+}
+
+/* Variables CSS pour les couleurs utilisées dans la section "Nos prestations" */
+:root .prestations {
+  --color-primary: #7EAED9; /* Couleur primaire pour le fond */
+  --color-secondary: #ffffff; /* Couleur secondaire pour le fond */
+  --color-text: #ffffff; /* Couleur du texte */
+}
+
+/* Styles pour la hauteur du corps de la page */
+html, body {
+  height: 100%;
+}
+
+/* Style pour la marge du corps de la page */
+body {
+  margin: 0;
+}
+
+/* Définition de la police de caractères pour les textes */
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+
+/* Styles pour les écrans de taille moyenne (tablette) */
+@media (max-width: 991px) {
+  .global-title, h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+  }
+
+  h5 {
+    font-size: 1.1rem;
+  }
+
+  h6 {
+    font-size: 0.9rem;
+  }
+
+  p, a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .global-title, h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.8rem;
+  }
+
+  p, a {
+    font-size: 1rem;
+  }
+
+  .global-title::before {
+    width: 100px;
+  }
+}
+
+/* Styles pour les écrans très petits (smartphones) */
+@media (max-width: 480px) {
+  .global-title, h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  h5 {
+    font-size: 0.8rem;
+  }
+
+  h6 {
+    font-size: 0.7rem;
+  }
+
+  p, a {
+    font-size: 0.9rem;
+  }
+
+  .global-title::before {
+    width: 80px;
+  }
+}
+
+.title-presentation {
+  text-shadow: 1px 1px 1px #00000091;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.lead-texte {
+
+  font-family: 'Lato', sans-serif;
+    color: black;
+}

@@ -1,0 +1,18 @@
+<div class="topnav fixed-topnav" id="myTopnav">
+  <div class="logo">
+    <a class="navbar-brand" routerLink="/">{{title}} <span class="brand-square"></span>
+    </a>
+  </div>
+ 
+  <a (click)="scrollToPresentation()"> <span >Qui sommes nous</span> </a>
+  <a (click)="scrollToValeurs()"><span >Valeurs</span></a>
+  <a (click)="scrollToService()"><span >Nos services</span></a>
+  <a (click)="scrollToDemarche()"><span >Nos démarches</span></a>
+  <a (click)="scrollToRealisation()"><span >Nos réalisations</span></a>
+  <a (click)="scrollToTeam()"><span >Notre équipe</span></a>
+  <a (click)="scrollToContact()"><span >Contact</span></a>
+
+  <a href="javascript:void(0);" class="icon" (click)="myMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>

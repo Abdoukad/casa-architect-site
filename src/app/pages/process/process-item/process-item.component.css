@@ -1,0 +1,201 @@
+/* Bloc de styles pour la barre de navigation des étapes du processus */
+.step-nav {
+  display: flex; /* Affichage en ligne des éléments */
+  justify-content: space-between; /* Alignement des éléments à gauche et à droite de la barre */
+  align-items: center; /* Alignement vertical des éléments au centre */
+  border-bottom: 1px solid #cccccc; /* Ligne de séparation en bas de la barre */
+  margin-bottom: 2rem; /* Marge en bas de la barre */
+}
+
+.step-nav div {
+  cursor: pointer; /* Curseur en forme de main au survol des éléments */
+  padding: 0.5rem 0; /* Espacement intérieur des éléments */
+  position: relative; /* Positionnement relatif des éléments */
+  font-size: 1.6rem;
+  color: #333333;
+
+}
+
+
+.step-nav div.active {
+  color: #6FB0DD; /* Couleur de police des éléments actifs */
+  font-weight: bold; /* Gras sur les éléments actifs */
+  text-decoration: none; /* Pas de soulignement sur les éléments actifs */
+}
+
+.step-nav div.active::after { /* Ajout d'un élément ::after sur les éléments actifs */
+  content: ''; /* Contenu vide */
+  position: absolute; /* Positionnement absolu */
+  transition: all 0.3s ease;
+  bottom: -3px; /* En bas de l'élément */
+  left: 50%; /* Tout au centre */
+  width: 80%; /* Largeur de la barre sous l'élément actif */
+  height: 3px; /* Hauteur de la barre sous l'élément actif */
+  background-color: #6FB0DD; /* Couleur de la barre sous l'élément actif */
+  transform: translateX(-50%); /* Translate l'élément horizontalement de -50% de sa propre largeur pour le centrer */
+}
+
+/* Bloc de styles pour le contenu détaillé de l'étape active */
+
+.step-content {
+  display: flex; /* Affichage en ligne des éléments */
+  /* align-items: center; */
+  justify-content: space-between; /* Alignement horizontal des éléments à gauche et à droite de l'espace vide */
+  margin-bottom: 2rem; /* Marge en bas du composant */
+  flex-wrap: wrap;
+}
+
+.step-description {
+  width: 60%; /* Largeur de l'élément */
+  max-width: 800px; /* Largeur maximale de l'élément */
+  line-height: 1.5; /* Hauteur de ligne de l'élément */
+  margin-top: 0; /* Marge en haut de l'élément */
+  display: flex; /* Affichage en ligne des éléments */
+  flex-direction: column; /* Orientation verticale des éléments */
+  justify-content: center; /* Alignement vertical des éléments */
+  text-align: justify; /* Justification du texte */
+  margin-left: 2rem; /* Marge à gauche de l'élément */
+  margin-right: 4rem; /* Marge à droite de l'élément */
+}
+
+.step-description h3 {
+  font-size: 1.5rem; /* Taille de police de l'élément */
+  font-weight: bold; /* Gras sur l'élément */
+  color: #000000; /* Couleur de police de l'élément */
+  margin-bottom: 10px; /* Marge en bas de l'élément */
+  position: relative; /* Positionnement relatif de l'élément */
+}
+
+.step-description h3::before {
+  content: var(--step-counter); /* Ajoute le numéro de l'étape en utilisant la variable CSS --step-counter */
+  position: absolute; /* Positionne l'élément en mode "absolu" par rapport à son parent (step-description h3) */
+  left: -30px; /* Place l'élément à gauche de l'élément parent */
+  top: 50%; /* Positionne l'élément verticalement au milieu de l'élément parent */
+  transform: translateY(-50%); /* Translate l'élément verticalement de -50% de sa propre hauteur pour le centrer */
+  font-size: 24px;
+  font-weight: bold;
+  color: #6FB0DD;
+}
+
+.step-image {
+  width: 35%; /* Définit la largeur du conteneur d'image */
+  max-width: 350px; /* Définit la largeur maximale du conteneur d'image */
+}
+
+.step-image img {
+  width: 100%;
+  height: 600px; /* hauteur fixe */
+  object-fit: cover; /* Redimensionne l'image pour remplir complètement son conteneur */
+  border-radius: 5px;
+}
+
+.step-number {
+  display: none; /* Cache le numéro d'étape par défaut */
+}
+
+.step-counter {
+  font-size: 72px; /* Définit la taille de la police du numéro d'étape */
+  font-weight: bold; /* Définit l'épaisseur de la police du numéro d'étape */
+  color: #6FB0DD; /* Définit la couleur du numéro d'étape */
+  opacity: 0.15; /* Définit l'opacité du numéro d'étape */
+  position: absolute; /* Positionne l'élément en mode "absolu" par rapport à son parent */
+  top: 50%; /* Positionne l'élément verticalement au milieu de l'élément parent */
+  left: -45px; /* Place l'élément à gauche de l'élément parent */
+  transform: translateY(-50%); /* Translate l'élément verticalement de -50% de sa propre hauteur pour le centrer */
+}
+
+/* Ajoutez ces styles pour les cercles colorés */
+.step-circle {
+  display: none;
+  width: 28px;
+  height: 28px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #333333;
+  margin-left: 10px;
+  text-align: center;
+  line-height: 24px; /* pour centrer verticalement le texte */
+  color: #ffffff;
+  font-size: 14px;
+  align-items: center; /* ajouté pour centrer verticalement */
+  justify-content: center; /* ajouté pour centrer horizontalement */
+}
+
+.step-nav div.active .step-circle {
+  background-color: #6FB0DD;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .step-content {
+    flex-direction: column;
+  }
+
+  .step-description {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .step-image {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .step-description {
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .step-image {
+    width: 35%;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: flex;
+    align-items: center;
+  }
+  .step-image img {
+    max-width: 100%; 
+  }
+}
+  .step-nav-item {
+    width: 200px;
+    gap: 2rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    .step-nav {
+      flex-direction: column;
+    }
+  
+    .step-nav-item {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .step-number {
+      font-size: 1.2rem;
+    }
+  
+    .step-circle {
+      display: none;
+    }
+    
+  }
+
+  @media screen and (min-width: 768px) {
+    .step-nav-item {
+      width: auto;
+    }
+  
+    .step-circle {
+      display: block;
+      font-size: 1.2rem;
+    }
+  }
+
+
+
+

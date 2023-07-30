@@ -1,0 +1,306 @@
+/* Configuration globale du conteneur */
+.container {
+  max-width: 960px;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+/* Configuration du titre principal */
+.global-title {
+  margin-bottom: 3rem;
+}
+
+/* Configuration du sous-titre */
+.team-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Configuration de l'ensemble des éléments de la galerie */
+.gallery-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Ajout de l'attribut flex-wrap pour permettre l'enroulement des éléments de la galerie */
+}
+
+/* Configuration de chaque élément de la galerie */
+.gallery-item {
+  position: relative;
+  display: flex;
+  flex: 1;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  transition: flex 0.5s, opacity 0.25s;
+}
+
+/* Opacité des éléments de la galerie lorsqu'ils ne sont pas survolés */
+.gallery-item:not(:hover) {
+  opacity: 0.75;
+}
+
+/* Configuration de l'élargissement des éléments de la galerie lorsqu'ils sont survolés */
+.gallery-item:hover {
+  flex: 5;
+}
+
+/* Configuration de l'image de chaque élément de la galerie */
+.item-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Configuration de la description de chaque élément de la galerie */
+.item-description {
+  align-self: flex-end;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Configuration des noms et rôles des membres de l'équipe */
+.name, .role {
+  opacity: 0;
+  transition: opacity 0.25s, transform 0.3s;
+}
+
+/* Configuration du nom */
+.name {
+  font-size: 37px;
+  background: linear-gradient(90deg, #F32d5b, #ff009b);
+  padding-inline: 10px;
+  transform: translateY(-10px);
+}
+
+/* Configuration du rôle */
+.role {
+  display: inline-block;
+  background: linear-gradient(90deg, #4136d9, #7EAED9);
+  padding: 10px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(10px);
+}
+
+/* Configuration de l'opacité et de la transformation des noms et rôles lors du survol */
+.gallery-item:hover .name, .gallery-item:hover .role {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.advantages {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.advantage {
+  flex: 1;
+  text-align: center;
+  margin: 0.5rem 1rem;
+  color: #6FB0DD;
+}
+
+.advantage i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.advantage p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.advantage-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Media query pour les écrans avec une largeur maximale de 767px (mobile) */
+@media (max-width: 767px) {
+  /* Réduire la taille de police du sous-titre pour les petits écrans */
+  .team-subtitle {
+    font-size: 18px;
+  }
+
+  /* Passer la direction des éléments de la galerie à la colonne */
+  .gallery-wrapper {
+    flex-direction: column;
+  }
+
+  /* Modifier la marge inférieure des éléments de la galerie */
+  .gallery-item {
+    margin-bottom: 2rem;
+  }
+
+  .advantages {
+    flex-wrap: wrap;
+  }
+
+  /* Modifier la marge inférieure des avantages */
+  .advantage {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Media query pour les écrans avec une largeur minimale de 768px (tablette) */
+@media (min-width: 768px) {
+  /* Passer la direction des éléments de la galerie à la ligne et définir la hauteur */
+  .gallery-wrapper {
+    flex-direction: row;
+    height: 60vh;
+  }
+
+  /* Modifier la largeur des avantages */
+  .advantage {
+    width: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .team-subtitle {
+    font-size: 24px;
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .advantage {
+    flex: 1;
+    text-align: center;
+    margin: 0.5rem 1rem;
+    color: #6FB0DD;
+  }
+}
+
+/* Media query pour les écrans avec une largeur maximale de 575px (mobile) */
+@media (max-width: 575px) {
+  /* Passer la direction des éléments de la galerie à la colonne */
+  .gallery-wrapper {
+    flex-direction: column;
+  }
+
+  /* Modifier la largeur et la hauteur des éléments de la galerie */
+  .gallery-item {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ajuster les propriétés de l'image des éléments de la galerie */
+  .item-image {
+    width: 100%;
+    padding-bottom: 14.25%; /* Modifier le padding-bottom pour ajuster la hauteur de l'image */
+    object-fit: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .item-description {
+    padding: 0 1rem;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .role {
+    font-size: 12px;
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .advantage {
+    margin: 1rem;
+  }
+
+
+  .team-subtitle {
+    line-height: 1.4;
+  }
+
+  .advantage i {
+    font-size: 2rem;
+  }
+
+  .advantage p {
+    font-size: 1.25rem;
+  }
+
+
+  .name, .role {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ajuster la position et la largeur de la description de chaque élément de la galerie */
+.item-description {
+  padding: 0 1rem;
+  box-sizing: border-box;
+  position: absolute; /* Ajout de la position absolue pour afficher les noms et les rôles correctement lors du survol */
+  bottom: 0; /* Aligner les noms et les rôles avec le bas de l'image */
+  width: 100%; /* Ajuster la largeur de la description de l'élément */
+  text-align: center; /* Centrer le texte de la description */
+}
+
+/* Ajuster la taille de police du nom et du rôle */
+.name {
+  font-size: 24px;
+}
+
+.role {
+  font-size: 12px;
+}
+
+
+/* Ajuster la marge des avantages */
+.advantage {
+  margin: 1rem;
+}
+
+/* Ajuster la hauteur de ligne du sous-titre de l'équipe */
+.team-subtitle {
+  line-height: 1.4;
+}
+
+/* Ajuster la taille de police des icônes et du texte des avantages */
+.advantage i {
+  font-size: 2rem;
+}
+
+.advantage p {
+  font-size: 1.25rem;
+}
+
+/* Restaurer le comportement de survol pour les noms et les rôles */
+.name, .role {
+  opacity: 1;
+  transform: translateY(0);
+}
+

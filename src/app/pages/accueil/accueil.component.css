@@ -1,0 +1,97 @@
+/* Style pour le header */
+.header-container {
+  height: 100vh; /* Hauteur du header à 100% de la hauteur de l'écran */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Positionnement relatif pour permettre le positionnement absolu des éléments enfants */
+  overflow: hidden;
+}
+
+.header-bg {
+  position: absolute; /* Positionnement absolu par rapport au header-container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+  z-index: -1; /* Place l'arrière-plan derrière le texte */
+}
+
+.header-text {
+  text-align: center;
+  z-index: 1; /* Place le texte au-dessus de l'arrière-plan */
+  text-shadow: 2px 2px 2px #000;
+}
+
+.header-text h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: #FFFFFF;
+}
+
+.header-text h2 {
+  color: #FFFFFF;
+}
+
+.blue-text {
+  color: #7EAED9;
+}
+
+.header-image {
+  position: absolute; /* Positionnement absolu par rapport au header-container */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/accueil-min.jpg'); /* Image d'arrière-plan */
+  background-size: cover; /* Redimensionne l'image pour couvrir tout le conteneur */
+  background-position: center;
+  opacity: 0.9; /* Opacité pour créer un effet de superposition */
+}
+
+/* Effet de parallax */
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+  transform: translateZ(-1px) scale(2);
+}
+
+/* Point de rupture pour les petits écrans (smartphones) */
+@media (max-width: 767px) {
+  /* Style pour le header en mode mobile */
+  .header-text h1 {
+    font-size: 2.5rem; /* Réduction de la taille du texte du titre pour les petits écrans */
+  }
+
+  .header-text h2 {
+    font-size: 1.8rem; /* Réduction de la taille du texte du sous-titre pour les petits écrans */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Style pour le header en mode tablette */
+  .header-text h1 {
+    font-size: 3rem; /* Réduction de la taille du texte du titre pour les tablettes */
+  }
+
+  .header-text h2 {
+    font-size: 2rem; /* Réduction de la taille du texte du sous-titre pour les tablettes */
+  }
+
+  .header-image {
+    background-attachment: fixed; /* Empêche l'image de se dédoubler sur les tablettes */
+  }
+}
+

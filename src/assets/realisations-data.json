@@ -1,0 +1,30 @@
+{
+  "titre": "Nos Réalisations",
+  "description": "Découvrez nos <span class='colored-word'>réalisations</span> les plus récentes et laissez-vous inspirer par notre expertise dans la <span class='colored-word'>conception</span> et la <span class='colored-word'>réalisation</span> de projets d'<span class='colored-word'>architecture</span> résidentielle et commerciale. Notre équipe est fière de vous présenter un aperçu de notre travail, témoignant de notre engagement envers la <span class='colored-word'>qualité</span> et la <span class='colored-word'>créativité</span>.",
+  "projets": [
+    {
+      "id": 1,
+      "nom": "Projet Boisée",
+      "image": "assets/images/projet1-min.jpg",
+      "description": "Le Projet Boisée est une magnifique résidence située au cœur d'une forêt. Nous avons travaillé en étroite collaboration avec nos clients pour créer un espace de vie harmonieux et respectueux de l'environnement."
+    },
+    {
+      "id": 2,
+      "nom": "Villa Dominguo",
+      "image": "assets/images/projet2-min.jpg",
+      "description": "La Villa Dominguo est une luxueuse villa avec une vue imprenable sur la mer. Notre équipe a conçu et construit cette maison sur mesure en tenant compte des besoins et des préférences de nos clients."
+    },
+    {
+      "id": 3,
+      "nom": "Villa Alfredo",
+      "image": "assets/images/projet3-min.jpg",
+      "description": "La Villa Alfredo est une élégante résidence qui combine modernité et tradition. Notre équipe a su trouver un équilibre parfait entre les deux styles pour créer un espace de vie unique et confortable."
+    },
+    {
+      "id": 4,
+      "nom": "Centre commercial",
+      "image": "assets/images/projet7-min.jpg",
+      "description": "Le Centre commercial est un projet ambitieux qui a permis de revitaliser une zone commerciale en déclin. Grâce à notre expertise et notre sens du détail, nous avons transformé cet espace en un lieu attractif pour les entreprises et les consommateurs."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Conception architecturale",
+    "image": "assets/images/nosService1-min.jpg",
+    "slogan": "Concevez votre avenir avec notre expertise"
+  },
+  {
+    "title": "Planification urbaine et stratégiques",
+    "image": "assets/images/nosService2-min.jpg",
+    "slogan": "Construisons ensemble les villes de demain"
+  },
+  {
+    "title": "Gestion de projet et coordination",
+    "image": "assets/images/nosService3-min.jpg",
+    "slogan": "Nous sommes là pour vous accompagner"
+  },
+  {
+    "title": "Développement durable",
+    "image": "assets/images/nosService4-min.jpg",
+    "slogan": "Investir pour un avenir plus responsable"
+  }
+]

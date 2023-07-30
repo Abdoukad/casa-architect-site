@@ -1,0 +1,80 @@
+/* Les styles de la section complète */
+.prestations {
+  padding: 15px 0;  
+}
+
+/* Les styles du titre de la section */
+.prestations-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 2.5rem;
+  margin-top: 23px;
+}
+
+/* Les styles de la galerie de prestations */
+.prestations-gallery {
+  display: flex; /* Utilise Flexbox pour aligner les éléments enfants (les cartes de prestation) */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Ajoute un espace entre chaque élément enfant */
+}
+
+/* Les styles d'une carte de prestation */
+.prestation-item {
+  flex: 0 0 22%; /* Définit la taille de l'élément à 22% de la largeur de la galerie de prestations */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out; /* Ajoute une animation lorsqu'une propriété CSS change (lorsque la carte est survolée) */
+  text-align: center;
+}
+
+/* Les styles appliqués à une carte de prestation lorsqu'elle est survolée */
+.prestation-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Les styles de l'image d'une prestation */
+.prestation-img-container img {
+  width: 100%; /* Fait que l'image occupe toute la largeur de la carte */
+  display: block; /* Fait que l'image occupe sa propre ligne (c'est-à-dire qu'aucun autre élément ne peut se situer à côté d'elle sur la même ligne) */
+  height: 400px; 
+  object-fit: cover;
+}
+
+/* Les styles du contenu d'une prestation (le titre et le slogan) */
+.prestation-content {
+  background: #fff;
+  padding: 20px;
+}
+
+/* Les styles du titre d'une prestation */
+.prestation-title-container h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Les styles du slogan d'une prestation */
+.prestation-slogan-container p {
+  margin: 0;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .prestation-item {
+    flex: 0 0 45%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .prestation-item {
+    flex: 0 0 100%;
+  }
+}
